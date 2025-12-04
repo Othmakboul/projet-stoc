@@ -2,17 +2,14 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# --- 1. CHARGEMENT DES DONNÉES EXPERT ---
-# ATTENTION : On charge bien le nouveau fichier
+
 fichier_csv = r"C:\Users\dell\Desktop\Resultats_NASA_Expert.csv"
 print(f"Lecture de : {fichier_csv}")
 df = pd.read_csv(fichier_csv)
 
 df['Date'] = pd.to_datetime(df['Date'])
 
-# --- 2. CHOIX DE L'INDICATEUR ---
-# C'est ici qu'on change tout ! 
-# Au lieu de surveiller l'énergie (RMS), on surveille la FORME (Kurtosis)
+
 colonne_a_surveiller = 'Kurtosis' 
 
 # --- 3. APPRENTISSAGE (CALIBRATION) ---

@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-from scipy.stats import kurtosis  # <--- NOUVEAU : Import indispensable
+from scipy.stats import kurtosis  
 
 # --- CONFIGURATION ---
 DOSSIER_DONNEES = r"D:\Projet_NASA_Data\2nd_test\2nd_test"
@@ -22,7 +22,7 @@ print(f"2. Nombre total de fichiers trouvés : {len(fichiers)}")
 resultats = []
 compteur = 0
 
-print("3. Démarrage du traitement Expert (RMS + Kurtosis)...")
+print("3. Démarrage du traitement (RMS + Kurtosis)...")
 
 for fichier in fichiers:
     # On ne traite que les fichiers de données
